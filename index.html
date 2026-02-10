@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter - Real-time Exchange Rates</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1>💱 Currency Converter</h1>
+            <p class="subtitle">Real-time exchange rates for international transactions</p>
+        </header>
+
+        <!-- Main Converter Section -->
+        <main class="converter-card">
+            <div class="status-indicator" id="statusIndicator">
+                <span class="status-dot"></span>
+                <span id="statusText">Loading rates...</span>
+            </div>
+
+            <div class="input-group">
+                <label for="amount">Amount</label>
+                <input 
+                    type="number" 
+                    id="amount" 
+                    placeholder="Enter amount" 
+                    value="100"
+                    min="0"
+                    step="0.01"
+                >
+            </div>
+
+            <div class="currency-row">
+                <div class="input-group">
+                    <label for="fromCurrency">From</label>
+                    <select id="fromCurrency">
+                        <option value="USD">USD - US Dollar</option>
+                        <option value="EUR">EUR - Euro</option>
+                        <option value="ARS">ARS - Argentine Peso</option>
+                        <option value="GBP">GBP - British Pound</option>
+                        <option value="BRL">BRL - Brazilian Real</option>
+                    </select>
+                </div>
+
+                <button class="swap-button" id="swapButton" title="Swap currencies">
+                    ⇄
+                </button>
+
+                <div class="input-group">
+                    <label for="toCurrency">To</label>
+                    <select id="toCurrency">
+                        <option value="USD">USD - US Dollar</option>
+                        <option value="EUR">EUR - Euro</option>
+                        <option value="ARS" selected>ARS - Argentine Peso</option>
+                        <option value="GBP">GBP - British Pound</option>
+                        <option value="BRL">BRL - Brazilian Real</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="result-section" id="resultSection">
+                <div class="result-amount" id="resultAmount">0.00</div>
+                <div class="exchange-rate" id="exchangeRate">1 USD = 0 ARS</div>
+                <div class="last-updated" id="lastUpdated"></div>
+            </div>
+
+            <button class="refresh-button" id="refreshButton">
+                🔄 Refresh Rates
+            </button>
+        </main>
+
+        <!-- Features Section -->
+        <section class="features">
+            <h2>Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Real-time Rates</h3>
+                    <p>Fetches current exchange rates from exchangerate-api.com</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Instant Conversion</h3>
+                    <p>Updates results as you type with TypeScript validation</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Offline Fallback</h3>
+                    <p>Works with cached rates when API is unavailable</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Built with TypeScript | Exchange rates provided by exchangerate-api.com</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
