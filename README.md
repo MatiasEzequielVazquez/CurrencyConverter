@@ -1,92 +1,37 @@
-# Currency Converter - Real-time Exchange Rates
+# Currency Converter
 
-A TypeScript-based currency converter with real-time exchange rates from exchangerate-api.com and offline fallback support.
+A TypeScript-based currency converter with real-time exchange rates and offline fallback support.
 
 ## Features
 
-- **Real-time Exchange Rates**: Fetches current rates from external API
-- **Instant Conversion**: Updates results as you type
-- **Offline Fallback**: Works with cached rates when API is unavailable
-- **TypeScript**: Full type safety and interfaces
-- **Responsive Design**: Works on all devices
+- Real-time exchange rates from exchangerate-api.com
+- Instant conversion as you type
+- Offline fallback with cached rates
+- TypeScript for type safety
+- Responsive design for all devices
 
-## How to Run
+## Live Demo
 
-### Option 1: Simple (No TypeScript compilation needed)
+[View live site](https://MatiasEzequielVazquez.github.io/CurrencyConverter/)
 
-1. Compile TypeScript to JavaScript first:
+## How to Run Locally
+
+1. Clone the repository:
 ```bash
-   tsc script.ts
-```
-   This creates `script.js`
-
-2. Open `index.html` in your browser
-
-### Option 2: With Live Server (Recommended)
-
-1. Install TypeScript globally (if not installed):
-```bash
-   npm install -g typescript
+   git clone https://github.com/MatiasEzequielVazquez/CurrencyConverter.git
+   cd CurrencyConverter
 ```
 
-2. Compile TypeScript:
+2. Compile TypeScript (if you make changes to script.ts):
 ```bash
-   tsc script.ts
+   tsc
 ```
 
-3. Use VS Code Live Server extension or:
-```bash
-   python -m http.server 8000
-```
+3. Open `index.html` in your browser
 
-4. Open `http://localhost:8000`
+## Technical Details
 
-## Technical Highlights for Presentation
-
-### TypeScript Features Demonstrated:
-
-1. **Interfaces**: 
-   - `ExchangeRates` for rate data structure
-   - `APIResponse` for API response typing
-   - `ConversionResult` for conversion output
-
-2. **Async/Await**: 
-   - Fetching data from external API
-   - Error handling with try/catch
-
-3. **Event Handling**:
-   - Real-time input validation
-   - Currency swap functionality
-   - Refresh button interaction
-
-4. **Type Safety**:
-   - Proper typing of DOM elements
-   - Number validation and formatting
-
-### JavaScript Concepts:
-
-- Fetch API for HTTP requests
-- DOM manipulation
-- Event listeners
-- Class-based architecture
-- Error handling with fallbacks
-
-## API Information
-
-- **Provider**: exchangerate-api.com
-- **Free Tier**: 1,500 requests/month
-- **No API Key Required**: Public endpoint
-- **Update Frequency**: Daily
-
-## Fallback Strategy
-
-If API fails (no internet, rate limit exceeded, etc.):
-- Automatically switches to hardcoded rates
-- Visual indicator shows "offline mode"
-- All functionality continues to work
-- User is informed via status indicator
-
-## Supported Currencies
+### Currently Supported Currencies
 
 - USD - US Dollar
 - EUR - Euro
@@ -94,16 +39,14 @@ If API fails (no internet, rate limit exceeded, etc.):
 - GBP - British Pound
 - BRL - Brazilian Real
 
-(Easy to add more in HTML select options)
+## API Information
 
-## Browser Compatibility
+- Provider: exchangerate-api.com
+- Free tier: 1,500 requests/month
+- No API key required
+- Updates: Daily
 
-Works in all modern browsers:
-- Chrome/Edge
-- Firefox
-- Safari
-- Opera
 
 ## License
 
-Free to use and modify.
+MIT License - see LICENSE file for details
